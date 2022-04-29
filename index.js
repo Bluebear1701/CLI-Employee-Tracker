@@ -27,7 +27,7 @@ choices: []
 }]).then(answers => {
     console.log(answers)
     //make if else change to check what the user choice was
-    //either run function inside the if statement
+    //run function inside the if statement
 })
 }
 
