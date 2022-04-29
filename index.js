@@ -1,6 +1,7 @@
 const mysql = require('mysql2');
 const inquirer =require('inquirer');
 
+
 // Connect to database
 const db = mysql.createConnection(
     {
@@ -16,7 +17,22 @@ const db = mysql.createConnection(
 
 
 function startFunction(){
+inquirer.prompt([{
+    type:"list",
+name: "userChoice",
+message:"What do you want to do?"
+choices: []
 
+
+}]).then(answers => {
+    console.log(answers)
+    //make if else change to check what the user choice was
+    //either run function inside the if statement
+})
+}
+
+function addDepartment() {
+    inquirer.prompt
 }
 
 
