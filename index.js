@@ -13,3 +13,16 @@ const db = mysql.createConnection(
     },
     console.log('Connected to the election database.')
 );
+
+
+function startFunction(){
+
+}
+
+
+
+
+db.connect(err => {
+    if (err) throw err;
+    startFunction();
+})
