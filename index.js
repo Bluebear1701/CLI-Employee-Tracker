@@ -1,13 +1,13 @@
 const connnection = require('./config/connection');
 const mysql = require('mysql2');
 const { viewDepartment } = require("./queries");
-const inquirer = require('inquirer');
+var inquirer = require('inquirer');
 
 function startFunction() {
     inquirer.prompt([
         {
             type: "list",
-            name: "userChoice",
+            name: "userOptions",
             message: "What do you want to do?",
             choices: [
                 "View all departments",
@@ -40,7 +40,7 @@ function addDepartment() {
 
 
 
-db.connect(err => {
-    if (err) throw err;
-    startFunction();
-})
+// db.connect(err => {
+//     if (err) throw err;
+//     startFunction();
+// })
