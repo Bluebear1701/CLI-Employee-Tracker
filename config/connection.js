@@ -1,4 +1,5 @@
 // const { connect } = require('http2');
+const { config } = require('dotenv');
 const mysql = require('mysql2');
 require("dotenv");
 
@@ -20,4 +21,4 @@ db.connect(err => {
     startFunction();
 });
 
-module.exports=db
+module.exports = config
