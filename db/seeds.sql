@@ -1,9 +1,9 @@
-USE employee_tracker;
+-- USE employee_tracker;
 
 INSERT INTO department (name)
 VALUES
   ("Family"),  
-  ("Pediatrics").
+  ("Pediatrics"),
   ("OBGYN"),
   ("Counseling");
 
@@ -12,12 +12,12 @@ VALUES
   ('LVN Floor Supervisor', 65000, 1),
   ('MA Team Lead', 55000, 1),
   ('MA', 40000, 1),
-  ('CSR', 3000, 1),
+  ('CSR', 30000, 1),
 
   ('LVN Floor Supervisor', 65000, 2),
   ('MA Team Lead', 55000, 2),
   ('MA', 40000, 2),
-  ('CSR', 3000, 2),
+  ('CSR', 30000, 2),
 
   ('Supervising RN', 70000,3),
   ('MA', 40000, 3),
