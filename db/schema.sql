@@ -1,7 +1,7 @@
 USE employee_tracker;
 CREATE TABLE department (
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(30) NOT NULL
+    name VARCHAR(30) 
 );
 
 CREATE TABLE role (
@@ -19,5 +19,5 @@ CREATE TABLE employee (
   role_id INTEGER, 
   manager_id INTEGER,
   FOREIGN KEY (role_id)references role(id),
-  FOREIGN KEY (manager_id)references employee(id)
+  FOREIGN KEY (manager_id)references employee(id) 
 );

@@ -1,3 +1,4 @@
+// const { connect } = require('http2');
 const mysql = require('mysql2');
 require("dotenv");
 
@@ -11,7 +12,12 @@ const db = mysql.createConnection(
         password: '@Gypsy1701!mas',
         database: 'employeetracker'
     },
-    console.log('Connected to the election database.')
+    console.log('Connected to the employeetracker database.')
 );
+
+db.connect(err => {
+    if (err) throw err;
+    startFunction();
+});
 
 module.exports=db
