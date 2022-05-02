@@ -16,9 +16,9 @@ const db = mysql.createConnection(
     console.log('Connected to the employee_tracker database.')
 );
 
-db.connect(err => {
-    if (err) throw err;
-    startFunction();
-});
+// db.connect(err => {
+//     if (err) throw err;
+//     startFunction();
+// });
 
 module.exports = config

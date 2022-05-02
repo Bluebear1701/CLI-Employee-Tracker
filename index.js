@@ -1,7 +1,7 @@
 const connnection = require('./config/connection');
+var inquirer = require('inquirer');
 const mysql = require('mysql2');
 const { viewDepartment } = require("./queries");
-var inquirer = require('inquirer');
 
 function startFunction() {
     inquirer.prompt([
@@ -40,7 +40,7 @@ function addDepartment() {
 
 
 
-// db.connect(err => {
+// .connect(err => {
 //     if (err) throw err;
 //     startFunction();
-// })
+// }) 
