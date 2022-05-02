@@ -8,6 +8,8 @@ The user will then be presented with a table depending on what they choose to vi
 ## Link 
 https://github.com/Bluebear1701/CLI-Employee-Tracker
 
+https://drive.google.com/file/d/1K_npGoQ_gFFnGm5gfQB_4mtimvhlSifk/view
+
 
 ## Screenshot
 assets\employee_tracker_image.png
