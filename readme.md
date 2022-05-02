@@ -12,4 +12,5 @@ https://drive.google.com/file/d/1K_npGoQ_gFFnGm5gfQB_4mtimvhlSifk/view
 
 
 ## Screenshot
-assets\employee_tracker_image.png
+![screen shot of my website](assets\employee_tracker_image.png)
+
