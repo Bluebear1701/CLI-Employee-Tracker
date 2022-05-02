@@ -66,7 +66,7 @@ function viewAllDepartments() {
 
 function viewAllRoles() {
     const sql =
-    `SELECT role.*, department.name
+        `SELECT role.*, department.name
     AS department_id
     FROM role
     LEFT JOIN department
@@ -78,6 +78,25 @@ function viewAllRoles() {
     })
 };
 
+function viewAllEmployees() {
+    const sql =
+        `SELECT E.id, 
+        E.first_name, 
+        E.last_name,
+        R.title, 
+        D.name AS department, 
+        R.salary, 
+        CONCAT(M.first_name,' ',M.last_name) AS manager 
+        FROM employee E 
+        JOIN role R ON E.role_id = R.id 
+        JOIN department D ON R.department_id = D.id 
+        LEFT JOIN employee M ON E.manager_id = M.id;`
+        db.query(sql, (err, rows) => {
+            if (err) throw err;
+            console.table(rows);
+            startFunction();
+        })
+};
 
 
 
