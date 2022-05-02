@@ -29,6 +29,8 @@ function startFunction() {
            case "View all departments":
                viewAllDepartments(); 
                break;
+           case "View all roles "    
+
        }
         //make if else change to check what the user choice was
         //run function inside the if statement
@@ -42,11 +44,12 @@ function viewAllDepartments(){
         console.table(rows);
         startFunction();
     })
-}
+};
+
 function addDepartment() {
     return inquirer.prompt([
         {
-            type: "list",
+            type: "input",
             name: "userChoice",
             message: "What department would you like to add?"
 

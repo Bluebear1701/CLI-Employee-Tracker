@@ -1,5 +1,3 @@
-USE employee_tracker;
-
 INSERT INTO department (name)
 VALUES
   ("Family"),  
@@ -7,13 +5,13 @@ VALUES
   ("OBGYN"),
   ("Counseling");
 
-INSERT INTO role ( title,salary,department_id)
+INSERT INTO role (title, salary, department_id)
 VALUES
   ('LVN Floor Supervisor', 65000, 1),
   ('MA Team Lead', 55000, 1),
   ('MA', 40000, 1),
-  ('CSR', 30000, 1),
-
+  ('CSR', 30000, 1);  
+  
   ('LVN Floor Supervisor', 65000, 2),
   ('MA Team Lead', 55000, 2),
   ('MA', 40000, 2),
@@ -44,6 +42,6 @@ VALUES
   ('Ezra', 'Davidson', 3, NULL),
   ('Bridget', 'Franklin', 3, NULL),
 
-  ('Oscar', 'Wilde', 4, 12),
+  ('Oscar', 'Wilde', 4, 12),  
   ('Jack', 'King', 4, NULL),
-  ('Mary', 'Tomlinson', 4, NULL),
+  ('Mary', 'Tomlinson', 4, NULL);
