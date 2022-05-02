@@ -1,7 +1,12 @@
-const connnection = require('./config/connection');
+const db = require('./config/connection');
 var inquirer = require('inquirer');
 const mysql = require('mysql2');
-const { viewDepartment } = require("./queries");
+const cTable = require('console.table');
+db.connect((err) => {
+    if(err) throw err;
+    console.log ("database connected");
+    startFunction();
+});
 
 function startFunction() {
     inquirer.prompt([
@@ -20,12 +25,24 @@ function startFunction() {
             ],
         },
     ]).then(answers => {
-        console.log(answers)
+       switch (answers.userOptions) {
+           case "View all departments":
+               viewAllDepartments(); 
+               break;
+       }
         //make if else change to check what the user choice was
         //run function inside the if statement
     })
 };
 
+function viewAllDepartments(){
+    const sql = `SELECT * from department`;
+    db.query(sql, (err, rows) => {
+        if (err) throw err;
+        console.table(rows);
+        startFunction();
+    })
+}
 function addDepartment() {
     return inquirer.prompt([
         {
@@ -40,7 +57,4 @@ function addDepartment() {
 
 
 
-// .connect(err => {
-//     if (err) throw err;
-//     startFunction();
-// }) 
+
